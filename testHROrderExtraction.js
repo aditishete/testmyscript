@@ -1,4 +1,4 @@
-testscript = async function (page) {
+testscript = async function (expressCode, page) {
 
     const extractedData = {};
     // Goto the Returns Page

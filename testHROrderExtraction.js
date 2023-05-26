@@ -68,7 +68,7 @@ testscript = async function (expressCode, page) {
     console.log("Extracted Data :" + extractedData)
     return extractedData;
 
-    function isTableDisplayed(page) {
+    async function isTableDisplayed(page) {
       await page.waitForSelector(
       "table[class='List__ListTable-sc-hzs485-0 ckEWGQ'] thead",
       {

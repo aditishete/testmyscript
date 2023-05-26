@@ -20,6 +20,6 @@ testscript = async function (page) {
         await targetPage.goto('https://www.evite.com/?gclid=Cj0KCQjwjryjBhD0ARIsAMLvnF9j_VahYhs4SJsh2vQOthBmPkLPH1J5TSDppe6sIW635KqWIOe9plsaAna2EALw_wcB');
         await Promise.all(promises);
     }
-     // await browser.close();
-    
+    await page.close();
+    return;
 }

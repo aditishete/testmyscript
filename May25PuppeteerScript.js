@@ -1,5 +1,5 @@
-testscript = function () => {
-    const browser = await puppeteer.launch();
+testscript = function (browser, page) => {
+//     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     const timeout = 5000;
     page.setDefaultTimeout(timeout);

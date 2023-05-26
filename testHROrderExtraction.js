@@ -35,7 +35,7 @@ testscript = async function (expressCode, page) {
     const [descriptionEle] = await page.$x(
       "//div[@class='styles__ItemTitle-sc-bqe11l-20 fddCrs']",
     );
-    extractedData['description'] = await this.evaluateElement(
+    extractedData['description'] = await evaluateElement(
       page,
       descriptionEle,
     );
@@ -43,7 +43,7 @@ testscript = async function (expressCode, page) {
     const [skuEle] = await page.$x(
       "//span[@class='styles__Sku-sc-bqe11l-27 dIUPxg']",
     );
-    extractedData['sku'] = await this.evaluateElement(page, skuEle);
+    extractedData['sku'] = await evaluateElement(page, skuEle);
 
     extractedData['tracking'] = await page.$eval(
       "div[class='styles__FlexCol-sc-bqe11l-1 gtgoKI shipment-status tracking-number'] div a[class='styles__DetailAnchor-sc-bqe11l-25 bJvWls']",
@@ -53,7 +53,7 @@ testscript = async function (expressCode, page) {
     const [refundStatus] = await page.$x(
       "(//span[@class='styles__StatusWrapper-sc-bqe11l-7 jNeSie'])[1]",
     );
-    extractedData['refundStatus'] = await this.evaluateElement(
+    extractedData['refundStatus'] = await evaluateElement(
       page,
       refundStatus,
     );
@@ -61,7 +61,7 @@ testscript = async function (expressCode, page) {
     const [shipmentStatus] = await page.$x(
       '/html[1]/body[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[2]/div[3]/div[1]/b[1]',
     );
-    extractedData['shipmentStatus'] = await this.evaluateElement(
+    extractedData['shipmentStatus'] = await evaluateElement(
       page,
       shipmentStatus,
     );

@@ -1,6 +1,6 @@
-const puppeteer = require('puppeteer'); // v13.0.0 or later
+// const puppeteer = require('puppeteer'); // v13.0.0 or later
 
-(async (require) => {
+(async (puppeteer) => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     const timeout = 5000;

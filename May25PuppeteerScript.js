@@ -1,4 +1,4 @@
-testscript = function () {
+testscript = function (page) {
 //     const browser = await puppeteer.launch();
 //     const page = await browser.newPage();
     const timeout = 5000;

@@ -78,7 +78,7 @@ testscript = async function (expressCode, page) {
     );
     }
     
-  async evaluateElement(page, el) {
+  async function evaluateElement(page, el) {
     return page.evaluate((el) => el.innerText, el);
   }
 

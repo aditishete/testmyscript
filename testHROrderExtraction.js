@@ -59,7 +59,7 @@ testscript = async function (expressCode, page) {
     );
 
     const [shipmentStatus] = await page.$x(
-      '/html[1]/body[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[2]/div[3]/div[1]/b[1]',
+            "//span[normalize-space()='Label Created']",
     );
     extractedData['shipmentStatus'] = await evaluateElement(
       page,

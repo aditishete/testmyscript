@@ -51,7 +51,7 @@ testscript = async function (expressCode, page) {
     );
 
     const [refundStatus] = await page.$x(
-      "(//span[@class='styles__StatusWrapper-sc-bqe11l-7 jNeSie'])[1]",
+       "//span[@class='styles__StatusWrapper-sc-bqe11l-7 deftEj']",
     );
     extractedData['refundStatus'] = await evaluateElement(
       page,

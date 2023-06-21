@@ -9,7 +9,7 @@ testscript = async function (expressCode, page) {
     await page.type("input[type='search']", expressCode);
     await page.keyboard.press('Enter');
     await page.waitForXPath(
-      "//div[@id='app']/div/div[3]/div[2]/div/table/tbody/tr/td/span",
+      "//table[@class='List__ListTable-sc-hzs485-0 ckEWGQ']",
       {
         visible: true,
         timeout: 50000,
@@ -18,7 +18,7 @@ testscript = async function (expressCode, page) {
 
     // Click into the Detail page
     const elements = await page.$x(
-      "//div[@id='app']/div/div[3]/div[2]/div/table/tbody/tr/td/span",
+      "(//td[@class='styles__RowColumn-sc-u7pdh4-1 izrvEm'])[1]",
     );
     await elements[0].click();
     await page.waitForSelector('.Content-fcbmlX.bwCAAB', {
